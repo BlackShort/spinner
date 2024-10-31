@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import './Spinner.css';
 
 export const Spinner = () => {
     const [isSpinning, setIsSpinning] = useState(false);
