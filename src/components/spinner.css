@@ -1,0 +1,117 @@
+.wheel-game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.pointer {
+    position: absolute;
+    top: 1.5em;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 30px solid #FFD700;
+    z-index: 2;
+    margin-top: -20px;
+}
+
+.center {
+    position: absolute;
+    top: 36%;
+    z-index: 1;
+    width: 2em;
+    height: 2em;
+    background: black;
+    border-radius: 50%;
+    border: 1px solid orangered;
+}
+
+.wheel {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 10px solid #FFD700;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+.segment {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    clip-path: polygon(53% 0%, 100% 100%, 0% 54%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    transform-origin: 100% 100%;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.segment:nth-child(1) {
+    background-color: #b6cd32;
+}
+
+.segment:nth-child(2) {
+    background-color: #32CD32;
+}
+
+.segment:nth-child(3) {
+    background-color: #a932cd;
+}
+
+.segment:nth-child(4) {
+    background-color: #cd32b3;
+}
+
+.segment:nth-child(5) {
+    background-color: #cd3232;
+}
+
+.segment:nth-child(6) {
+    background-color: #32a6cd;
+}
+
+.segment:nth-child(7) {
+    background-color: #cd8e32;
+}
+
+.segment:nth-child(8) {
+    background-color: #32cda0;
+}
+
+.segment:nth-child(9) {
+    background-color: #ff6347;
+}
+
+.segment span {
+    transform: rotate(-22.5deg);
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border: none;
+    background-color: #FFD700;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ffc107;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
